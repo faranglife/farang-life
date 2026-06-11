@@ -80,7 +80,7 @@ const ARTICLE_QUEUE = [
   }
 ];
 
-function getTodaySlug() { 
+function getTodaySlug() {
   return new Date().toISOString().split('T')[0];
 }
 
