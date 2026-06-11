@@ -120,7 +120,7 @@ Format des tableaux : utilise la classe art-table
 Les anecdotes doivent être plausibles et factuelles — pas de détails trop précis inventés.`;
 
   const response = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-6",
     max_tokens: 4000,
     messages: [{ role: "user", content: prompt }]
   });
