@@ -120,13 +120,23 @@ Format des callouts : <div class="callout"><p>contenu</p></div>
 Format des tableaux : utilise la classe art-table
 Les anecdotes doivent être plausibles et factuelles — pas de détails trop précis inventés.`;
 
-  const response = await client.messages.create({
-    model: "claude-opus-4-6",
-    max_tokens: 4000,
-    messages: [{ role: "user", content: prompt }]
+const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": process.env.ANTHROPIC_API_KEY,
+      "anthropic-version": "2023-06-01"
+    },
+    body: JSON.stringify({
+      model: "claude-opus-4-6",
+      max_tokens: 4000,
+      messages: [{ role: "user", content: prompt }]
+    })
   });
-
-  const raw = response.content[0].text;
+  const data = await response.json();
+  if (data.error) throw new Error(data.error.message);
+  const raw = data.content[0].text;
+  
   const match = raw.match(/<article-content>([\s\S]*?)<\/article-content>/);
   if (!match) throw new Error("Format de réponse inattendu");
   return match[1].trim();
