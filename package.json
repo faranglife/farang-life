@@ -1,11 +1,5 @@
 {
   "name": "farang-pipeline",
   "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "generate": "node scripts/generate-article.js"
-  },
-  "dependencies": {
-    "@anthropic-ai/sdk": "0.24.0"
-  }
+  "type": "module"
 }
