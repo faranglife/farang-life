@@ -23,7 +23,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+        
+      - name: Debug model name
+        run: grep -n "model:" scripts/generate-article.js
+        
       - name: Generate article
         id: generate
         env:
