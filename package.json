@@ -6,6 +6,6 @@
     "generate": "node scripts/generate-article.js"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.24.0"
+    "@anthropic-ai/sdk": "0.24.0"
   }
 }
