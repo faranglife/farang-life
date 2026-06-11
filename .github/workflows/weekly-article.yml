@@ -22,7 +22,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install @anthropic-ai/sdk && node -e "console.log('Model check:'); const fs=require('fs'); const c=fs.readFileSync('scripts/generate-article.js','utf8'); console.log(c.match(/model: \"[^\"]+\"/)[0]);"
+        run: npm install @anthropic-ai/sdk
 
       - name: Generate article
         id: generate
