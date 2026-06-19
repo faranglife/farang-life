@@ -166,8 +166,9 @@ Callouts : <div class="callout"><p>texte</p></div>`;
 
   const raw = await callClaude(prompt);
   const match = raw.match(/<article-content>([\s\S]*?)<\/article-content>/);
-  if (!match) throw new Error("Format inattendu — balises article-content manquantes");
-  return match[1].trim();
+  if (match) return match[1].trim();
+  console.warn("Balises article-content absentes, utilisation de la réponse brute");
+  return raw.trim();
 }
 
 function buildPage(meta, content) {
