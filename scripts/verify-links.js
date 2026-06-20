@@ -22,11 +22,44 @@ for (const lang of langs) {
   }
 }
 
-for (const file of fs.readdirSync("articles/fr").filter(f => f.endsWith(".html"))) {
-  const html = fs.readFileSync("articles/fr/" + file, "utf8");
-  if (!/Publié le \d+ [^<]+ 202[34]/.test(html)) { console.log("FR no 2023-24 pub date:", file); problems++; }
-  if (/20 juin 2026/.test(html)) { console.log("FR still has today date:", file); problems++; }
+// Dates : pub présente (2023-2026), update présente, pas de date "aujourd'hui" 2026-06
+for (const lang of langs) {
+  const pubRe = lang === "fr" ? /Publié le \d+ [^<]+ 202\d/ : /Published \d+ [^<]+ 202\d/;
+  const updRe = lang === "fr" ? /Mis à jour le \d+ [^<]+ 202\d/ : /Updated \d+ [^<]+ 202\d/;
+  for (const file of fs.readdirSync("articles/" + lang).filter(f => f.endsWith(".html"))) {
+    const html = fs.readFileSync("articles/" + lang + "/" + file, "utf8");
+    if (!pubRe.test(html)) { console.log("no pub date:", lang, file); problems++; }
+    if (!updRe.test(html)) { console.log("no update date:", lang, file); problems++; }
+    if (/20 juin 2026/.test(html)) { console.log("leftover today date:", lang, file); problems++; }
+  }
 }
 
-console.log(problems === 0 ? "\nALL CHECKS PASSED (28 pages)" : "\n" + problems + " PROBLEM(S)");
+// CheckDi : liens posés, plus aucun bouton d'affiliation en href="#"
+const checkdi = {
+  "assurance-sante-expatrie-thailande": "checkdi.com/th/health/main",
+  "scooter-bangkok-guide": "checkdi.com/th/motorbike/main"
+};
+for (const [slug, needle] of Object.entries(checkdi)) {
+  for (const lang of langs) {
+    const html = fs.readFileSync(`articles/${lang}/${slug}.html`, "utf8");
+    if (!html.includes(needle)) { console.log("MISS checkdi link:", lang, slug); problems++; }
+    if (/href="#"\s+class="aff-(btn|inline)"/.test(html)) { console.log("affiliate button still href=#:", lang, slug); problems++; }
+    if (html.includes("affid=AG12836") === false) { console.log("MISS affid:", lang, slug); problems++; }
+  }
+}
+
+// Sitemap
+if (!fs.existsSync("sitemap.xml")) { console.log("sitemap.xml manquant"); problems++; }
+else {
+  const sm = fs.readFileSync("sitemap.xml", "utf8");
+  const n = (sm.match(/<url>/g) || []).length;
+  if (n !== 29) { console.log("sitemap: attendu 29 <url>, trouvé", n); problems++; }
+  for (const lang of langs) {
+    for (const file of fs.readdirSync("articles/" + lang).filter(f => f.endsWith(".html"))) {
+      if (!sm.includes(`articles/${lang}/${file}`)) { console.log("sitemap manque:", lang, file); problems++; }
+    }
+  }
+}
+
+console.log(problems === 0 ? "\nALL CHECKS PASSED" : "\n" + problems + " PROBLEM(S)");
 process.exit(problems === 0 ? 0 : 1);
