@@ -41,7 +41,7 @@ nav {
 .nav-links a { font-size: 13px; color: var(--ink-mid); padding: 6px 10px; transition: color .15s; }
 .nav-links a:hover { color: var(--ink); }
 .nav-right { display: flex; gap: 8px; align-items: center; }
-.lang-btn { font-size: 12px; font-weight: 500; padding: 5px 9px; border: 1px solid var(--border-mid); border-radius: 3px; background: none; cursor: pointer; color: var(--ink-soft); transition: all .15s; }
+.lang-btn { font-size: 12px; font-weight: 500; padding: 5px 9px; border: 1px solid var(--border-mid); border-radius: 3px; background: none; cursor: pointer; color: var(--ink-soft); transition: all .15s; text-decoration: none; display: inline-block; }
 .lang-btn.active { background: var(--ink); color: var(--white); border-color: var(--ink); }
 .nav-sub { font-size: 12px; font-weight: 500; color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
 

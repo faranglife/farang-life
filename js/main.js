@@ -11,6 +11,10 @@ function setLang(lang) {
 }
 
 function initLang() {
+  // Pages d'article : langue figée par la page elle-même (vraies versions FR/EN
+  // séparées). Le toggle est alors un lien vers l'autre version.
+  const pageLang = document.body.dataset.pageLang;
+  if (pageLang) { setLang(pageLang); return; }
   const saved = localStorage.getItem(LANG_KEY);
   const browser = navigator.language.startsWith('fr') ? 'fr' : 'en';
   setLang(saved || browser);
