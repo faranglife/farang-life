@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farang.io — Notes d'un expat à Bangkok</title>
+  <title>Farang.life — Notes d'un expat à Bangkok</title>
   <meta name="description" content="Ce que j'aurais voulu savoir avant de m'installer en Thaïlande. Visa, banque, assurance, fiscalité — sans bullshit.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇹🇭</text></svg>">
@@ -12,7 +12,7 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><em>farang</em><span>.io</span></a>
+    <a href="index.html" class="nav-logo"><em>farang</em><span>.life</span></a>
     <ul class="nav-links">
       <li><a href="#" data-lang="fr">Visa & admin</a><a href="#" data-lang="en">Visa & admin</a></li>
       <li><a href="#" data-lang="fr">Vivre ici</a><a href="#" data-lang="en">Life here</a></li>
@@ -22,8 +22,6 @@
     <div class="nav-right">
       <button class="lang-btn active" onclick="setLang('fr')">FR</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
-      <a href="#newsletter" class="nav-sub" data-lang="fr">Newsletter →</a>
-      <a href="#newsletter" class="nav-sub" data-lang="en">Newsletter →</a>
     </div>
   </div>
 </nav>
@@ -41,8 +39,6 @@
       <span data-lang="en">My name is Marc. I've lived in Bangkok for 7 years. Before that, I worked in travel across Europe. This site is the answers to questions I had when I arrived — questions everyone still has. <strong>No bullshit, no AI fluff, no generic advice.</strong></span>
     </p>
     <div class="site-actions">
-      <a href="#newsletter" class="btn-sub" data-lang="fr">Recevoir la newsletter →</a>
-      <a href="#newsletter" class="btn-sub" data-lang="en">Get the newsletter →</a>
       <a href="#articles" class="btn-browse" data-lang="fr">Lire les guides</a>
       <a href="#articles" class="btn-browse" data-lang="en">Read the guides</a>
     </div>
@@ -90,8 +86,8 @@
     <p class="featured-excerpt" data-lang="fr">Visa touriste, Non-Immigrant O, SMART Visa, puis LTR — chaque changement m'a coûté du temps et de l'argent. Le guide complet pour choisir le bon visa selon votre situation dès l'arrivée.</p>
     <p class="featured-excerpt" data-lang="en">Tourist visa, Non-Immigrant O, SMART Visa, then LTR — every switch cost me time and money. The complete guide to picking the right visa for your situation from day one.</p>
     <div class="featured-meta">
-      <a href="articles/fr/visa-thailande.html" class="read-link" data-lang="fr">Lire le guide →</a>
-      <a href="articles/fr/visa-thailande.html" class="read-link" data-lang="en">Read the guide →</a>
+      <a href="articles/fr/visa-thailande.html" data-fr-href="articles/fr/visa-thailande.html" data-en-href="articles/en/visa-thailande.html" class="read-link" data-lang="fr">Lire le guide →</a>
+      <a href="articles/fr/visa-thailande.html" data-fr-href="articles/fr/visa-thailande.html" data-en-href="articles/en/visa-thailande.html" class="read-link" data-lang="en">Read the guide →</a>
       <span class="art-time" data-lang="fr">15 min de lecture</span>
       <span class="art-time" data-lang="en">15 min read</span>
     </div>
@@ -115,7 +111,7 @@
 
   <div class="articles-list">
 
-    <a href="articles/fr/visa-thailande.html" class="article-row">
+    <a href="articles/fr/visa-thailande.html" data-fr-href="articles/fr/visa-thailande.html" data-en-href="articles/en/visa-thailande.html" class="article-row">
       <div class="row-img" style="background:#EBF0F4;">🛂</div>
       <div>
         <div class="row-kicker" data-lang="fr">Visa</div>
@@ -129,7 +125,7 @@
       </div>
     </a>
 
-    <a href="articles/fr/tm30-guide.html" class="article-row">
+    <a href="articles/fr/tm30-guide.html" data-fr-href="articles/fr/tm30-guide.html" data-en-href="articles/en/tm30-guide.html" class="article-row">
       <div class="row-img" style="background:#F4F1EB;">📋</div>
       <div>
         <div class="row-kicker" data-lang="fr">Administratif</div>
@@ -143,7 +139,7 @@
       </div>
     </a>
 
-    <a href="articles/fr/permis-conduire-thailande.html" class="article-row">
+    <a href="articles/fr/permis-conduire-thailande.html" data-fr-href="articles/fr/permis-conduire-thailande.html" data-en-href="articles/en/permis-conduire-thailande.html" class="article-row">
       <div class="row-img" style="background:#F4EBEB;">🚗</div>
       <div>
         <div class="row-kicker" data-lang="fr">Administratif</div>
@@ -157,7 +153,7 @@
       </div>
     </a>
 
-    <a href="articles/fr/fiscalite-expat-thailande.html" class="article-row">
+    <a href="articles/fr/fiscalite-expat-thailande.html" data-fr-href="articles/fr/fiscalite-expat-thailande.html" data-en-href="articles/en/fiscalite-expat-thailande.html" class="article-row">
       <div class="row-img" style="background:#EBF4EF;">🧾</div>
       <div>
         <div class="row-kicker" data-lang="fr">Fiscalité</div>
@@ -182,7 +178,7 @@
 
   <div class="articles-list">
 
-    <a href="articles/fr/compte-bancaire-thailande.html" class="article-row">
+    <a href="articles/fr/compte-bancaire-thailande.html" data-fr-href="articles/fr/compte-bancaire-thailande.html" data-en-href="articles/en/compte-bancaire-thailande.html" class="article-row">
       <div class="row-img" style="background:#EBF0F4;">🏦</div>
       <div>
         <div class="row-kicker" data-lang="fr">Finance</div>
@@ -196,7 +192,7 @@
       </div>
     </a>
 
-    <a href="articles/fr/quartiers-bangkok-expat.html" class="article-row">
+    <a href="articles/fr/quartiers-bangkok-expat.html" data-fr-href="articles/fr/quartiers-bangkok-expat.html" data-en-href="articles/en/quartiers-bangkok-expat.html" class="article-row">
       <div class="row-img" style="background:#F4F1EB;">🏠</div>
       <div>
         <div class="row-kicker" data-lang="fr">Immobilier</div>
@@ -210,7 +206,7 @@
       </div>
     </a>
 
-    <a href="articles/fr/cout-vie-bangkok.html" class="article-row">
+    <a href="articles/fr/cout-vie-bangkok.html" data-fr-href="articles/fr/cout-vie-bangkok.html" data-en-href="articles/en/cout-vie-bangkok.html" class="article-row">
       <div class="row-img" style="background:#EBF4EF;">💸</div>
       <div>
         <div class="row-kicker" data-lang="fr">Budget</div>
@@ -224,7 +220,7 @@
       </div>
     </a>
 
-    <a href="articles/fr/assurance-sante-expatrie-thailande.html" class="article-row">
+    <a href="articles/fr/assurance-sante-expatrie-thailande.html" data-fr-href="articles/fr/assurance-sante-expatrie-thailande.html" data-en-href="articles/en/assurance-sante-expatrie-thailande.html" class="article-row">
       <div class="row-img" style="background:#EBF4EF;">🏥</div>
       <div>
         <div class="row-kicker" data-lang="fr">Santé</div>
@@ -238,7 +234,7 @@
       </div>
     </a>
 
-    <a href="articles/fr/hopitaux-bangkok.html" class="article-row">
+    <a href="articles/fr/hopitaux-bangkok.html" data-fr-href="articles/fr/hopitaux-bangkok.html" data-en-href="articles/en/hopitaux-bangkok.html" class="article-row">
       <div class="row-img" style="background:#EBF4EF;">💊</div>
       <div>
         <div class="row-kicker" data-lang="fr">Santé</div>
@@ -263,7 +259,7 @@
 
   <div class="articles-list">
 
-    <a href="articles/fr/scooter-bangkok-guide.html" class="article-row">
+    <a href="articles/fr/scooter-bangkok-guide.html" data-fr-href="articles/fr/scooter-bangkok-guide.html" data-en-href="articles/en/scooter-bangkok-guide.html" class="article-row">
       <div class="row-img" style="background:#F4EBEB;">🛵</div>
       <div>
         <div class="row-kicker" data-lang="fr">Transport</div>
@@ -277,7 +273,7 @@
       </div>
     </a>
 
-    <a href="articles/fr/scooter-bangkok-verite.html" class="article-row">
+    <a href="articles/fr/scooter-bangkok-verite.html" data-fr-href="articles/fr/scooter-bangkok-verite.html" data-en-href="articles/en/scooter-bangkok-verite.html" class="article-row">
       <div class="row-img" style="background:#F4EBEB;">🏍️</div>
       <div>
         <div class="row-kicker" data-lang="fr">Transport</div>
@@ -302,7 +298,7 @@
 
   <div class="articles-list">
 
-    <a href="articles/fr/escapades-week-end-bangkok.html" class="article-row">
+    <a href="articles/fr/escapades-week-end-bangkok.html" data-fr-href="articles/fr/escapades-week-end-bangkok.html" data-en-href="articles/en/escapades-week-end-bangkok.html" class="article-row">
       <div class="row-img" style="background:#EBF4EF;">🏝️</div>
       <div>
         <div class="row-kicker" data-lang="fr">Voyages</div>
@@ -316,7 +312,7 @@
       </div>
     </a>
 
-    <a href="articles/fr/coups-de-coeur-bangkok.html" class="article-row">
+    <a href="articles/fr/coups-de-coeur-bangkok.html" data-fr-href="articles/fr/coups-de-coeur-bangkok.html" data-en-href="articles/en/coups-de-coeur-bangkok.html" class="article-row">
       <div class="row-img" style="background:#F4F1EB;">☕</div>
       <div>
         <div class="row-kicker" data-lang="fr">Adresses</div>
@@ -330,7 +326,7 @@
       </div>
     </a>
 
-    <a href="articles/fr/restaurants-bangkok-2025.html" class="article-row">
+    <a href="articles/fr/restaurants-bangkok-2025.html" data-fr-href="articles/fr/restaurants-bangkok-2025.html" data-en-href="articles/en/restaurants-bangkok-2025.html" class="article-row">
       <div class="row-img" style="background:#F4EBEB;">🍜</div>
       <div>
         <div class="row-kicker" data-lang="fr">Restaurants</div>
@@ -347,43 +343,10 @@
   </div>
 </div>
 
-<!-- NEWSLETTER -->
-<div class="nl-band" id="newsletter">
-  <div class="nl-inner">
-    <div class="nl-left">
-      <h2 class="nl-title">
-        <span data-lang="fr">Une fois par semaine.<br><em>Rien que l'utile.</em></span>
-        <span data-lang="en">Once a week.<br><em>Nothing but the useful.</em></span>
-      </h2>
-      <p class="nl-desc" data-lang="fr">Pas de contenu recyclé. Quand quelque chose change — une loi sur les visas, un comparatif mis à jour, un piège à éviter — vous le recevez en premier.</p>
-      <p class="nl-desc" data-lang="en">No recycled content. When something changes — a visa law, an updated comparison, a trap to avoid — you hear it first.</p>
-      <ul class="nl-perks">
-        <li data-lang="fr">Alertes changements immigration en temps réel</li>
-        <li data-lang="en">Real-time immigration change alerts</li>
-        <li data-lang="fr">Comparatifs mis à jour dès que les prix bougent</li>
-        <li data-lang="en">Comparisons updated when prices change</li>
-        <li data-lang="fr">Réponses aux questions des lecteurs chaque semaine</li>
-        <li data-lang="en">Reader questions answered every week</li>
-      </ul>
-    </div>
-    <div class="nl-right">
-      <form class="nl-form" onsubmit="return false;">
-        <div class="nl-inputs">
-          <input type="email" class="nl-input" placeholder="votre@email.com">
-          <button type="submit" class="nl-btn" data-lang="fr">S'abonner →</button>
-          <button type="submit" class="nl-btn" data-lang="en">Subscribe →</button>
-        </div>
-        <p class="nl-note" data-lang="fr">Gratuit. Désinscription en un clic. Aucun sponsor caché.</p>
-        <p class="nl-note" data-lang="en">Free. Unsubscribe in one click. No hidden sponsors.</p>
-      </form>
-    </div>
-  </div>
-</div>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="nav-logo"><em>farang</em><span style="color:var(--accent)">.io</span></div>
+      <div class="nav-logo"><em>farang</em><span style="color:var(--accent)">.life</span></div>
       <p data-lang="fr">Notes d'un expat à Bangkok. Indépendant depuis 2017.</p>
       <p data-lang="en">Notes from a Bangkok expat. Independent since 2017.</p>
     </div>
@@ -391,19 +354,19 @@
       <h4 data-lang="fr">Guides</h4>
       <h4 data-lang="en">Guides</h4>
       <ul>
-        <li><a href="articles/fr/visa-thailande.html" data-lang="fr">Visa Thaïlande</a><a href="articles/fr/visa-thailande.html" data-lang="en">Thailand Visa</a></li>
-        <li><a href="articles/fr/assurance-sante-expatrie-thailande.html" data-lang="fr">Assurance santé</a><a href="articles/fr/assurance-sante-expatrie-thailande.html" data-lang="en">Health insurance</a></li>
-        <li><a href="articles/fr/compte-bancaire-thailande.html" data-lang="fr">Compte bancaire</a><a href="articles/fr/compte-bancaire-thailande.html" data-lang="en">Bank account</a></li>
-        <li><a href="articles/fr/fiscalite-expat-thailande.html" data-lang="fr">Fiscalité expat</a><a href="articles/fr/fiscalite-expat-thailande.html" data-lang="en">Expat tax</a></li>
+        <li><a href="articles/fr/visa-thailande.html" data-fr-href="articles/fr/visa-thailande.html" data-en-href="articles/en/visa-thailande.html" data-lang="fr">Visa Thaïlande</a><a href="articles/fr/visa-thailande.html" data-fr-href="articles/fr/visa-thailande.html" data-en-href="articles/en/visa-thailande.html" data-lang="en">Thailand Visa</a></li>
+        <li><a href="articles/fr/assurance-sante-expatrie-thailande.html" data-fr-href="articles/fr/assurance-sante-expatrie-thailande.html" data-en-href="articles/en/assurance-sante-expatrie-thailande.html" data-lang="fr">Assurance santé</a><a href="articles/fr/assurance-sante-expatrie-thailande.html" data-fr-href="articles/fr/assurance-sante-expatrie-thailande.html" data-en-href="articles/en/assurance-sante-expatrie-thailande.html" data-lang="en">Health insurance</a></li>
+        <li><a href="articles/fr/compte-bancaire-thailande.html" data-fr-href="articles/fr/compte-bancaire-thailande.html" data-en-href="articles/en/compte-bancaire-thailande.html" data-lang="fr">Compte bancaire</a><a href="articles/fr/compte-bancaire-thailande.html" data-fr-href="articles/fr/compte-bancaire-thailande.html" data-en-href="articles/en/compte-bancaire-thailande.html" data-lang="en">Bank account</a></li>
+        <li><a href="articles/fr/fiscalite-expat-thailande.html" data-fr-href="articles/fr/fiscalite-expat-thailande.html" data-en-href="articles/en/fiscalite-expat-thailande.html" data-lang="fr">Fiscalité expat</a><a href="articles/fr/fiscalite-expat-thailande.html" data-fr-href="articles/fr/fiscalite-expat-thailande.html" data-en-href="articles/en/fiscalite-expat-thailande.html" data-lang="en">Expat tax</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Bangkok</h4>
       <ul>
-        <li><a href="articles/fr/quartiers-bangkok-expat.html" data-lang="fr">Quartiers</a><a href="articles/fr/quartiers-bangkok-expat.html" data-lang="en">Neighbourhoods</a></li>
-        <li><a href="articles/fr/hopitaux-bangkok.html" data-lang="fr">Hôpitaux</a><a href="articles/fr/hopitaux-bangkok.html" data-lang="en">Hospitals</a></li>
-        <li><a href="articles/fr/escapades-week-end-bangkok.html" data-lang="fr">Escapades</a><a href="articles/fr/escapades-week-end-bangkok.html" data-lang="en">Getaways</a></li>
-        <li><a href="articles/fr/cout-vie-bangkok.html" data-lang="fr">Coût de la vie</a><a href="articles/fr/cout-vie-bangkok.html" data-lang="en">Cost of living</a></li>
+        <li><a href="articles/fr/quartiers-bangkok-expat.html" data-fr-href="articles/fr/quartiers-bangkok-expat.html" data-en-href="articles/en/quartiers-bangkok-expat.html" data-lang="fr">Quartiers</a><a href="articles/fr/quartiers-bangkok-expat.html" data-fr-href="articles/fr/quartiers-bangkok-expat.html" data-en-href="articles/en/quartiers-bangkok-expat.html" data-lang="en">Neighbourhoods</a></li>
+        <li><a href="articles/fr/hopitaux-bangkok.html" data-fr-href="articles/fr/hopitaux-bangkok.html" data-en-href="articles/en/hopitaux-bangkok.html" data-lang="fr">Hôpitaux</a><a href="articles/fr/hopitaux-bangkok.html" data-fr-href="articles/fr/hopitaux-bangkok.html" data-en-href="articles/en/hopitaux-bangkok.html" data-lang="en">Hospitals</a></li>
+        <li><a href="articles/fr/escapades-week-end-bangkok.html" data-fr-href="articles/fr/escapades-week-end-bangkok.html" data-en-href="articles/en/escapades-week-end-bangkok.html" data-lang="fr">Escapades</a><a href="articles/fr/escapades-week-end-bangkok.html" data-fr-href="articles/fr/escapades-week-end-bangkok.html" data-en-href="articles/en/escapades-week-end-bangkok.html" data-lang="en">Getaways</a></li>
+        <li><a href="articles/fr/cout-vie-bangkok.html" data-fr-href="articles/fr/cout-vie-bangkok.html" data-en-href="articles/en/cout-vie-bangkok.html" data-lang="fr">Coût de la vie</a><a href="articles/fr/cout-vie-bangkok.html" data-fr-href="articles/fr/cout-vie-bangkok.html" data-en-href="articles/en/cout-vie-bangkok.html" data-lang="en">Cost of living</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -411,13 +374,12 @@
       <h4 data-lang="en">This site</h4>
       <ul>
         <li><a href="#" data-lang="fr">À propos</a><a href="#" data-lang="en">About</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
         <li><a href="#" data-lang="fr">Mentions légales</a><a href="#" data-lang="en">Legal</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Farang.io</span>
+    <span>© 2025 Farang.life</span>
     <span data-lang="fr">Fait à Bangkok 🇹🇭 — Les liens affiliés ne changent pas vos prix</span>
     <span data-lang="en">Made in Bangkok 🇹🇭 — Affiliate links don't change your price</span>
   </div>

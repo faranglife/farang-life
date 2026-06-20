@@ -8,6 +8,10 @@ function setLang(lang) {
   document.querySelectorAll('.lang-btn, .nav-lang').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+  // Liens d'articles bilingues : pointer vers la version FR ou EN
+  document.querySelectorAll('[data-fr-href]').forEach(el => {
+    el.setAttribute('href', lang === 'fr' ? el.dataset.frHref : el.dataset.enHref);
+  });
 }
 
 function initLang() {
@@ -18,31 +22,6 @@ function initLang() {
   const saved = localStorage.getItem(LANG_KEY);
   const browser = navigator.language.startsWith('fr') ? 'fr' : 'en';
   setLang(saved || browser);
-}
-
-// Newsletter form
-function initNewsletter() {
-  document.querySelectorAll('.newsletter-form').forEach(form => {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const input = form.querySelector('.newsletter-input');
-      const btn = form.querySelector('.newsletter-submit');
-      const email = input.value.trim();
-      if (!email || !email.includes('@')) return;
-      btn.textContent = '...';
-      btn.disabled = true;
-      await new Promise(r => setTimeout(r, 900));
-      btn.textContent = '✓';
-      input.value = '';
-      input.placeholder = document.body.classList.contains('lang-fr')
-        ? 'Bienvenue ! On se retrouve dans votre boîte.'
-        : 'Welcome! Check your inbox.';
-      setTimeout(() => {
-        btn.textContent = document.body.classList.contains('lang-fr') ? 'Rejoindre →' : 'Join →';
-        btn.disabled = false;
-      }, 3000);
-    });
-  });
 }
 
 // Smooth scroll for TOC
@@ -70,7 +49,6 @@ function initProgress() {
 // Init
 document.addEventListener('DOMContentLoaded', () => {
   initLang();
-  initNewsletter();
   initTOC();
   initProgress();
 });
